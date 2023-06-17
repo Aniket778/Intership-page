@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    body {
+      background-image: url(/img/eath.jpg);
+      background-size: 100%;
+    }
+    h2 {
+      color: beige;
+      margin-top: 10%;
+      margin-left: 30%;
+    }
+    .login-box {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      color: #fff;
+    }
+    .login-box h2 {
+      text-align: center;
+    }
+    .user-box {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .user-box input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+    }
+    .user-box label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+    .user-box input:focus ~ label,
+    .user-box input:valid ~ label {
+      top: -20px;
+      left: 0;
+      color: #03e9f4;
+      font-size: 12px;
+    }
+    .user-box p {
+      color: beige;
+    }
+    .user-box input[type="radio"] {
+      display: inline-block;
+      width: auto;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    .user-box label {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .login-box a {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #03e9f4;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 0.5s;
+      margin-top: 40px;
+      letter-spacing: 4px;
+    }
+    .login-box a:hover {
+      background: #03e9f4;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    }
+    .login-box a span {
+      position: absolute;
+      display: block;
+    }
+    .login-box a span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #03e9f4);
+      animation: btn-anim1 1s linear infinite;
+    }
+    @keyframes btn-anim1 {
+      0% {
+        left: -100%;
+      }
+      50%,
+      100% {
+        left: 100%;
+      }
+    }
+    .login-box a span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #03e9f4);
+      animation: btn-anim2 1s linear infinite;
+      animation-delay: 0.25s;
+    }
+    @keyframes btn-anim2 {
+      0% {
+        top: -100%;
+      }
+      50%,
+      100% {
+        top: 100%;
+      }
+    }
+    .login-box a span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #03e9f4);
+      animation: btn-anim3 1s linear infinite;
+      animation-delay: 0.5s;
+    }
+    @keyframes btn-anim3 {
+      0% {
+        right: -100%;
+      }
+      50%,
+      100% {
+        right: 100%;
+      }
+    }
+    .login-box a span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #03e9f4);
+      animation: btn-anim4 1s linear infinite;
+      animation-delay: 0.75s;
+    }
+    @keyframes btn-anim4 {
+      0% {
+        bottom: -100%;
+      }
+      50%,
+      100% {
+        bottom: 100%;
+      }
+    }
+
+    /* Media Queries for Mobile View */
+    @media only screen and (max-width: 600px) {
+      body {
+        background-size: cover;
+      }
+      h2 { 
+        margin-top: 5%;
+        margin-left: 5%;
+        font-size: 18px;
+      }
+      .login-box {
+        padding: 10px;
+      }
+      .user-box input {
+        font-size: 14px;
+      }
+      .user-box label {
+        font-size: 12px;
+      }
+      .user-box p {
+        font-size: 14px;
+      }
+      .login-box a {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2 style="margin-top: 8%;">Get Internship at Vartix Aerospace</h2>
+  <div class="login-box">
+    <h2>Personel Information</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Name</label>
+      </div>
+      <div class="user-box">
+        <p>Birth date</p>
+        <input type="date" name="" required="">
+      </div>
+      <div class="user-box">
+        <input type="tel" name="" required="">
+        <label>Phone Number</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Address</label>
+      </div>
+      <p style="color: beige;">Gender</p>
+      <div style="color: azure;">
+        <input type="radio" name="" id="b1" required="">
+        <label>Male</label>
+        <br>
+      </div>
+      <div style="color: azure;">
+        <input type="radio" name="" id="b2" required="">
+        <label>Female</label>
+      </div>
+      <h3>Eduction</h3>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Name of College</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Address of College</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Year of College</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Current Sem</label>
+      </div>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+    </form>
+  </div>
+</body>
+</html>
